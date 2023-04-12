@@ -17,6 +17,8 @@
             name: docker
             state: started
             enabled: yes
+            command: systemctl daemon-reload
+
            
       - name: Install docker-py python module 
         pip:
