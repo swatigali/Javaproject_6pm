@@ -12,11 +12,26 @@
            name: docker
            state: present
            
-      - name: start docker
-        service:
-           name: docker
-           start: started
-           enabled: yes      
+     # - name: start docker
+     #   service:
+     #      name: docker
+      #     start: started
+    #       enabled: yes  
+    
+      - name: Enable docker.service
+        systemd:
+          name: docker.service
+          daemon_reload: true
+          enabled: true
+
+      - name: Enable containerd.service
+        systemd:
+          name: containerd.service
+          daemon_reload: true
+          enabled: true
+           
+           
+           
          
       - name: Install docker-py python module 
         pip:
