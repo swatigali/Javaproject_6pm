@@ -16,7 +16,7 @@
         service:
            name: docker
            enabled: yes 
-           start: started
+           start: restarted
             
     
                   
