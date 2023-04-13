@@ -15,8 +15,9 @@
       - name: start docker
         service:
            name: docker
+           enabled: yes 
            start: started
-           enabled: yes  
+            
     
                   
       - name: Install docker-py python module 
