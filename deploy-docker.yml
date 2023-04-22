@@ -15,11 +15,10 @@
       - name: start docker
         service:
            name: docker
+           start: started
            enabled: yes 
-           start: restarted
             
-    
-                  
+           
       - name: Install docker-py python module 
         pip:
           name: docker-py 
